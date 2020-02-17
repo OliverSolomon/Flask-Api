@@ -1,0 +1,143 @@
+body
+{
+    background-color: #101112;
+}
+header
+{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+} 
+img
+{
+    background-position: center;
+    background-size: contain;
+
+}  
+nav
+{
+    background: rgba(0,0,0, .8);
+    height: 25px;
+    border: 2.5px solid black;
+    background-color:  #2e2f34;
+    overflow: hidden;
+    padding: 10px 10px 10px 10px ;
+    position: sticky;
+    top: 0;
+}
+nav a
+{
+    text-align: center;
+    padding: 12px 12px;
+    font-size: 17px;
+    color: ghostwhite;
+    text-transform: uppercase;
+
+}
+nav a:hover
+{
+    background-color: lightgray;
+    color: black;
+}
+.nav-left
+{
+    float: left;
+    font-weight: bold;
+}
+.nav-left a.active
+{
+    background: lightgray;
+    color: black;
+}
+.nav-right
+{
+    float: right;
+    font-weight: bold;
+}
+.login-form
+{
+    margin: 10px auto;
+    max-width: 300px;
+    padding: 20px 12px 20px 12px;
+}
+.login-form a
+{
+    color:lightgrey;
+    padding: 5px 5px 5px 5px ;
+    margin: auto;
+}
+.login
+{
+    color: lightgrey;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.username
+{
+    color: lightgrey;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+.password
+{
+    color: lightgrey;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+.confirm_password
+{
+    color: lightgrey;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn
+{
+    float: center;
+    font-weight: bold;
+    padding: 5px 5px 5px 5px ;
+}
+.blog-form
+{
+    margin: 10px auto;
+    max-width: 600px;
+    max-height: 600px;
+    padding: 20px 12px 20px 12px;
+}
+.blog-form a
+{
+    color:lightgrey;
+    padding: 5px 5px 5px 5px ;
+    margin: auto;
+}
+.blog-post
+{
+    color: lightgrey;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.blog-title
+{
+    color: lightgrey;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+.blog-content
+{
+    color: lightgrey;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+.form-check
+{
+    color: lightgrey;
+    float: left;
+    padding: 5px 5px 5px 5px ;
+}

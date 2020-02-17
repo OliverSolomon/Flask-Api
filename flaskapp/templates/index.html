@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for blog in blogs %}
+
+        <article>
+            <div>
+            <a>{{ blog.author.username }}</a>
+            <snap>{{ blog.date_posted.strftime('%Y-%m-%d') }}</snap>
+            </div>
+            <div>
+            <h2><a>{{ blog.title }}</a></h2>
+            <p >{{ blog.content }}</p>
+            </div>
+        </article>
+
+    {% endfor %}
+
+{% endblock content %}

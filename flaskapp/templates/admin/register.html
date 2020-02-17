@@ -1,0 +1,58 @@
+{% extends 'admin/layout1.html' %}
+{% block content %}
+
+<div>
+    <form class="login-form" method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset >
+            <legend class="login">
+                Login
+            </legend>
+            <div class="username">
+                {{ form.username.label() }}
+                    {% if form.username.errors %}
+                        {{ form.username() }}
+                        <div>
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username() }}
+                {% endif %}
+            </div>
+            <div class="password">
+                {{ form.password.label() }}
+                    {% if form.password.errors %}
+                        {{ form.password() }}
+                        <div>
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password() }}
+                {% endif %}
+            </div>
+            <div class="confirm_password">
+                {{ form.confirm_password.label() }}
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password() }}
+                        <div>
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.confirm_password() }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div >
+        {{ form.submit(class="btn") }}
+        </div>
+        <a class="forgot" href="{{ url_for('login') }}">Already Have an account</a>
+    </form>
+</div><!--end log form -->
+
+{% endblock content %}
