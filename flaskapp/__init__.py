@@ -10,6 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URL']='sqlite:///site.db'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
+<<<<<<< HEAD
 login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 
@@ -19,4 +20,15 @@ from flaskapp.main.routes import main
 
 app.register_blueprint(main)
 app.register_blueprint(master)
+=======
+login_manager.login_view = 'login'
+login_manager.login_message_category = 'info'
+
+from flaskapp.users.routes import users
+from flaskapp.posts.routes import posts
+from flaskapp.main.routes import main
+
+app.register_blueprint(main)
+app.register_blueprint(posts)
+>>>>>>> origin/master
 app.register_blueprint(users)
