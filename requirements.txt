@@ -128,7 +128,7 @@ python-editor==1.0.3
 python-pam==1.8.4
 pytz==2018.9
 pyxdg==0.25
-PyYAML==3.13
+PyYAML==5.1
 reportbug==7.5.1
 requests==2.20.0
 requests-file==1.4.3
