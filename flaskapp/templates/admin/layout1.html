@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+    <title>Course Work</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="{{url_for('index')}}" class="active">Home</a>
+            <a href="{{ url_for('blog') }}">Post_blog</a>
+            <a href="#">User</a>
+            <a herf="#"> database</a>
+        </div>
+        <div class="nav-right">
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{url_for('login')}}">login</a>
+        </div>
+    </nav>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+</html>
