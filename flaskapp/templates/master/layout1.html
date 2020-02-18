@@ -9,13 +9,12 @@
     <nav class="navbar">
         <div class="nav-left">
             <a href="{{url_for('main.index')}}" class="active">Home</a>
-            <a href="{{ url_for('master.blog') }}">Post_blog</a>
-            <a href="#">User</a>
-            <a herf="#"> database</a>
+            <a href="{{url_for('master.dashboard')}}">Dashboard</a>
+            <a href="{{ url_for('master.blog')}}">Post_blog</a>
+            <a href="{{url_for('master.database')}}">Database</a>
         </div>
         <div class="nav-right">
-            <a href="{{ url_for('users.register') }}">Register</a>
-            <a href="{{url_for('users.login')}}">login</a>
+            <a href="{{url_for('users.logout')}}">logout</a>
         </div>
     </nav>
     <main>

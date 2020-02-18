@@ -1,16 +1,16 @@
-{% extends "admin/layout1.html" %}
+{% extends "master/layout1.html" %}
 {% block content %}
     <div>
         <form class="blog-form" method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset >
                 <legend class="blog-post">
-                    Login
+                    Post Blog
                 </legend>
                 <div class="blog-title">
-                    {{ form.blog_title.label() }}
-                    {% if form.blog_title.errors %}
-                        {{ form.blog_title() }}
+                    {{ form.title.label() }}
+                    {% if form.title.errors %}
+                        {{ form.title() }}
                         <div>
                             {% for error in form.title.errors %}
                                 <span>{{ error }}</span>
@@ -21,9 +21,9 @@
                     {% endif %}
                 </div>
                 <div class="blog-content">
-                    {{ form.blog_title.label() }}
-                    {% if form.blog_content.errors %}
-                        {{ form.blog_content() }}
+                    {{ form.content.label() }}
+                    {% if form.content.errors %}
+                        {{ form.content() }}
                         <div>
                             {% for error in form.content.errors %}
                                 <span>{{ error }}</span>
@@ -32,6 +32,15 @@
                     {% else %}
                         {{ form.content() }}
                     {% endif %}
+                </div>
+                <div class="blog-title">
+                    {{ form.image.label() }}
+                    {{ form.image() }}
+                     {% if form.image.errors %}
+                         {% for error in form.image.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                     {% endif %}
                 </div>
             </fieldset>
             <div >

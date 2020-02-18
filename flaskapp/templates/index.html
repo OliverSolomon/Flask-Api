@@ -1,9 +1,5 @@
 {% extends "layout.html" %}
 {% block content %}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
     {% for blog in blogs %}
 
         <article>
@@ -12,6 +8,7 @@
             <snap>{{ blog.date_posted.strftime('%Y-%m-%d') }}</snap>
             </div>
             <div>
+            <img>{{ blog.image }}</img>
             <h2><a>{{ blog.title }}</a></h2>
             <p >{{ blog.content }}</p>
             </div>

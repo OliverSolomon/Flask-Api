@@ -1,0 +1,10 @@
+{% extends "master/layout1.html" %}
+{% block content %}
+    <ol>
+        <li>
+            <a href="{{url_for('users.user_tables')}}">Users</a>
+            <a href="{{url_for('master.blog_tables')}}">Blogs</a>
+            <a href="{{url_for('notifications.comment_table')}}">Comments</a>
+        </li>
+    </ol>    
+{% endblock content %}

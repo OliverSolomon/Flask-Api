@@ -5,7 +5,7 @@ from flaskapp.models import Blog
 main = Blueprint('main',__name__)
 
 @main.route('/')
-@main.route('/Home')
+@main.route('/home')
 def index():
   blogs = Blog.query.all()
   return render_template('index.html', blogs=blogs,title = 'Blog')

@@ -1,0 +1,29 @@
+{% extends "master/layout1.html" %}
+{% block content %}
+    <div>
+        <ol>
+            <li>
+                <a href="{{url_for('users.user_tables')}}">Users</a>
+                <a href="{{url_for('master.blog_tables')}}">Blogs</a>
+                <a href="{{url_for('notifications.comment_table')}}">Comments</a>
+            </li>
+        </ol>    
+    </div>
+    <div>
+        <table>
+            <thead>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Name</th>
+            </thead>
+            {% for admin in admins %}
+            <tbody>
+                <td><span>Edit Icon</span></td>
+                <td><span>Delete Icon</span></td>
+                <td>{{ user.name }}</td>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+    
+{% endblock content %}
