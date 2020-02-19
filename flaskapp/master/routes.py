@@ -1,7 +1,7 @@
 import os
 import secrets
-from flask import render_template, url_for, flash, redirect, request, Blueprint
-from flaskapp import db,app
+from flask import render_template, url_for, flash, redirect, request, Blueprint, current_app
+from flaskapp import db
 from flaskapp.models import Blog, Notifications 
 from flaskapp.master.forms import BlogForm
 from flask_login import current_user,login_required
@@ -14,7 +14,7 @@ def save_picture(form_image):
 	random_hex = secrets.token_hex(8)
 	_, f_ext = os.path.splitext(form_image.filename)
 	picture_fn = random_hex + f_ext
-	picture_path = os.path.join(app.root_path, 'static/images', picture_fn)
+	picture_path = os.path.join(current_app.root_path, 'static/images', picture_fn)
 	form_image.save(picture_path)
 	return picture_fn
 
