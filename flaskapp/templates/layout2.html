@@ -1,29 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'style.css')}}">
-    <title>Course Work</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" type="image/png" href="static/assets/golden.png">
+    <link rel="apple-touch-icon" type="image/png" href="static/assets/golden.png" />
+    <link rel="stylesheet" href=" {{url_for('static',filename='main.css')}}">
+
+    <title>Terms and conditions // Pluged In</title>
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="nav-left">
-            <a href="{{url_for('main.index')}}" class="active">Blog</a>
-            {% if current_user.is_admin == True %}
-            <a href="{{url_for('master.dashboard')}}">Admin</a>
-            {% endif %}
-        </div>
-        <div class="nav-right">
-            {% if current_user.is_authenticated %}
-            <a href="{{url_for('users.logout')}}">logout</a>
-            {% else %}
-            <a href="{{ url_for('users.register') }}">Register</a>
-            <a href="{{url_for('users.login')}}">login</a>
-            {% endif %}
-        </div>
-    </nav>
-    <main>
-        {% block content %}{% endblock content %}
-    </main>
+
+    <div class="main-container">
+        <header class="kichwa">
+            <div class="hero">
+                <ul>
+                    <li>
+                        <div class="logo">
+                            <a href="index.html"><img src="static/assets/white.png"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <nav>
+                            <div class='nav-bar'>
+
+
+                                <!--<div class="left-items">
+                                <a href="#" onclick="javascript:alert('Coming Soon');return false;">Blog</a>
+                                <a href="#" onclick="javascript:alert('Coming Soon');return false;">Resources</a>
+                                <a href="#" onclick="javascript:alert('Coming Soon');return false;">Memes</a>
+                            </div>
+                            LIGHT SABER-->
+                                <div id="nav-container">
+                                    <div class="toggle-icon">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+
+                                <div class='sidebar'>
+                                    <a class='side-bar-items' id='hacks ' href="nocontent.html">Blogs</a>
+                                    <a class='side-bar-items' id="windows" href="nocontent.html"> Windows</a>
+                                    <a class='side-bar-items' id='linux' href="nocontent.html">Linux</a>
+                                    <a class='side-bar-items' id='linux' href="nocontent.html">Resources</a>
+                                    <!--<div class='second-menu'>
+                                        <menu class='hacks-menu'>
+                                            <menuitem><a>Wifi Hacking</a></menuitem>
+                                            <menuitem><a>Metasploit</a></menuitem>
+                                            <menuitem><a>Reconaisance</a></menuitem>
+                                        </menu>
+                                        <menu class='windows-menu'>
+                                            <menuitem><a>Installation</a></menuitem>
+                                            <menuitem><a>Activation</a></menuitem>
+                                            <menuitem><a>Configuration</a></menuitem>
+                                        </menu>
+                                        <menu class='linux-menu'>
+                                            <menuitem><a>Kali </a></menuitem>
+                                            <menuitem><a>Ubuntu </a></menuitem>
+                                            <menuitem><a>Others</a></menuitem>
+                                        </menu>
+
+                                    </div>-->
+                                </div>
+                                <!--END OF LIGHT SABER-->
+                            </div>
+                        </nav>
+                    </li>
+                </ul>
+
+                <blockquote>"Today is victory over oneself, tomorrow is victory over lesser men"</blockquote>
+                <p>~ Miyamoto Musashi</p>
+
+            </div>
+        </header>
+
+        <main>
+            {% block content %}{% endblock content %}
+        </main>
+        
+        <footer>
+            <p>email us: thlastofuz@gmail.com</p>
+            <!--<img src="assets/bottomLogo.png" class="footer-logo">-->
+
+            <div class="social">
+                <a href="https//:www.twitter.com"><img src="static/assets/twitter.png" alt="twiter icon"></a>
+                <a href="https//:www.instagram.com"><img src="static/assets/insta.png" class="instagram-icon"></a>
+                <a href="www.facebook.com"><img src="static/assets/fb.png" alt="facebook Icon"></a>
+            </div>
+
+            <p>
+                <a href="{{url_for('main.terms')}}">Terms & conditions</a></p>
+
+        </footer>
+
+    </div>
+    <script src="{{url_for('static', filename='temp.js')}}"></script>
 </body>
+
 </html>

@@ -9,3 +9,7 @@ main = Blueprint('main',__name__)
 def index():
   blogs = Blog.query.all()
   return render_template('index.html', blogs=blogs,title = 'Blog')
+
+@main.route('/terms')
+def terms():
+  return render_template ('terms.html', title = 'Terms and Conditions')

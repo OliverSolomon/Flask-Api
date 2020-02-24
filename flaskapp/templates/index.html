@@ -1,19 +1,199 @@
-{% extends "layout.html" %}
-{% block content %}
-    {% for blog in blogs %}
+<!DOCTYPE html>
+<html lang="en">
 
-        <article>
-            <div>
-            <a>{{ blog.author.username }}</a>
-            <snap>{{ blog.date_posted.strftime('%Y-%m-%d') }}</snap>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="We are the Remnants! We are Cache! Here you will get tips and tricks on all things programming and linux. Welcome to thelastofuz">
+
+    <link rel="icon" type="image/png" href="static/assets/golden.png">
+    <link rel="apple-touch-icon" type="image/png" href="static/assets/golden.png" />
+    <link rel="stylesheet" href="{{url_for('static', filename ='main.css')}}">
+
+    <title>Pluged In</title>
+</head>
+
+<body>
+
+
+    <div class="main-container">
+
+        <header class="kichwa">
+            <div class="hero">
+                <ul>
+                    <li>
+                        <div class="logo">
+                            <a href="#"><img src="static/assets/white.png"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <nav>
+                            <div class='nav-bar'>
+
+
+                                <!--<div class="left-items">
+                                <a href="#" onclick="javascript:alert('Coming Soon');return false;">Blog</a>
+                                <a href="#" onclick="javascript:alert('Coming Soon');return false;">Resources</a>
+                                <a href="#" onclick="javascript:alert('Coming Soon');return false;">Memes</a>
+                            </div>
+                            LIGHT SABER-->
+                                <div id="nav-container">
+                                    <div class="toggle-icon">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </div>
+
+                                <div class='sidebar'>
+                                    <a class='side-bar-items' id='Blog' href="{{url_for('main.index')}}">Blogs</a>
+                                    <a class='side-bar-items' id="Admin" href="{{url_for('master.dashboard')}}"> Windows</a>
+                                    <a class='side-bar-items' id='Register' href="{{ url_for('users.register')}}">Linux</a>
+                                    <a class='side-bar-items' id='login' href="{{url_for('users.login')}}">Resources</a>
+                                    <!--<div class='second-menu'>
+                                        <menu class='hacks-menu'>
+                                            <menuitem><a>Wifi Hacking</a></menuitem>
+                                            <menuitem><a>Metasploit</a></menuitem>
+                                            <menuitem><a>Reconaisance</a></menuitem>
+                                        </menu>
+                                        <menu class='windows-menu'>
+                                            <menuitem><a>Installation</a></menuitem>
+                                            <menuitem><a>Activation</a></menuitem>
+                                            <menuitem><a>Configuration</a></menuitem>
+                                        </menu>
+                                        <menu class='linux-menu'>
+                                            <menuitem><a>Kali </a></menuitem>
+                                            <menuitem><a>Ubuntu </a></menuitem>
+                                            <menuitem><a>Others</a></menuitem>
+                                        </menu>
+
+                                    </div>-->
+                                </div>
+                                <!--END OF LIGHT SABER-->
+                            </div>
+                        </nav>
+                    </li>
+                </ul>
+
+                <blockquote>"Today is victory over oneself, tomorrow is victory over lesser men"</blockquote>
+                <p>~ Miyamoto Musashi</p>
+
             </div>
-            <div>
-            <img>{{ blog.image }}</img>
-            <h2><a>{{ blog.title }}</a></h2>
-            <p >{{ blog.content }}</p>
+        </header>
+
+        <div class="torso">
+            <div class="imports">
+
+                <div class="amanda">
+                    <menu>
+                        <menuitem id="demo1">
+                        <a>category</a>
+                        <menu>
+
+                            <menuitem>
+                            <a>Linux Distros</a>
+                            <menu>
+                                <menuitem><a href="nocontent.html" target="_blank">Kali Linux</a></menuitem>
+                                <menuitem><a href="nocontent.html" target="_blank">Ubuntu Linux</a></menuitem>
+                                <menuitem><a href="nocontent.html" target="_blank">Others</a></menuitem>
+                                <menuitem><a href="nocontent.html" target="_blank">FAQs</a></menuitem>
+                            </menu>
+                            </menuitem>
+
+                            <menuitem>
+                            <a>Windows</a>
+                            <menu>
+                                <menuitem><a href="nocontent.html" target="_blank">Installation</a></menuitem>
+                                <menuitem><a href="nocontent.html" target="_blank">Activation</a></menuitem>
+                                <menuitem><a href="nocontent.html" target="_blank">Configuration</a></menuitem>
+                                <menuitem><a href="nocontent.html" target="_blank">FAQs</a></menuitem>
+                            </menu>
+                            </menuitem>
+
+                            <menuitem>
+                            <a>Hacks</a>
+                            <menu>
+                                <menuitem><a href="nocontent.html" target="_blank">Wifi Hacking</a></menuitem>
+                                <menuitem><a href="nocontent.html" target="_blank">Metasploit</a></menuitem>
+                                <menuitem><a href="nocontent.html" target="_blank">Reconaisance</a></menuitem>
+                            </menu>
+                            </menuitem>
+                        </menu>
+                        </menuitem>
+                    </menu>
+                </div>
+
+                <!--<button align>kcskcnsk</button>-->
             </div>
-        </article>
+            <div class="content">
+                <div class="paperClip">
+                    <img src="static/assets/paperclip.png">
+                </div>
 
-    {% endfor %}
+                <!-- Add the blog style here to take blog content from data base-->
+                <div class="post">
+                    <!-----------------------------------content goes here-->
+                    <h4>"Hello World"</h4>
+                    <p>echo("Hello World");</p>
+                    <p>
+                        Being the first blog post, it would only be customary to start from the top with the popular programmer's cliché, "Hello World" . Well, now that the customary pleasantries are over and done with, lets bite right in.
+                    </p>
+                    <p>
+                        Welcome to Cache,
+                    </p>
+                    <p>
+                        Here you will get tips and tricks on a lot of things programming. You don't have to be into programming to be an avid follower of our content; well … then that will either make you a geek, nerd or a friend trying to keep a friend from ditching the editor's
+                        pen. Or maybe you have just found us as a search result for a problem you are having with your machine and or code. Welcome, we got a solution for you; and much more interesting content.
+                    </p>
+                    <p>
+                        What's in Cache for me?
+                    </p>
+                    <p>
+                        Those still reading, welcome to the Cache family, "You are the Remnants" <i>#insert("laughing emojis") <small>(/* I keep on wishing this thing had emojis*/)</small></i>
+                        <ul>
+                            <li>&emsp;&emsp;&emsp;&emsp;<strong>>></strong>&emsp;Everything Linux (Installation of distros, customization, quick hacks)</li>
+                            <li>&emsp;&emsp;&emsp;&emsp;><strong>></strong>&emsp;Yap, we got hacking tutorials and news too, watch it done</li>
+                            <li>&emsp;&emsp;&emsp;&emsp;<strong>>></strong>&emsp;scripts for solutions , make apps with us, download and install them for free (We are open source
+                            </li>
+                            <li>&emsp;&emsp;&emsp;&emsp;<strong>>></strong>&emsp;Memes! and physicist jokes <i>(hmmmm, Engineers watch out! <small>#insert("skeleton + laughing emojis")</small>)</i>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        There are memes too!
+                    </p>
+                    <p>
+                        Yap, I said it earlier we don't only serve the silent kid with glasses and hoodie who's always on his computer. Upload your memes and well, make the world a better place?
+                    </p>
+                    <p>one last thing,</p>
+                    <p>"Hail Linux!", Windows and Mac are ummmmhhh, whats the word, acceptable - yes, that.</p>
+                    <p>Go forth into the world and: turn coffee into code.
+                    </p>
+                    <blockquote>~ The Last Of Us</blockquote>
+                </div>
+            </div>
+        </div>
 
-{% endblock content %}
+        <footer>
+            <p>email us: thlastofuz@gmail.com</p>
+            <!--<img src="assets/bottomLogo.png" class="footer-logo">-->
+
+            <div class="social">
+                <a href="https//:www.twitter.com"><img src="static/assets/twitter.png" alt="twiter icon"></a>
+                <a href="https//:www.instagram.com"><img src="static/assets/insta.png" class="instagram-icon"></a>
+                <a href="https//:www.facebook.com"><img src="static/assets/fb.png" alt="facebook Icon"></a>
+            </div>
+
+            <p>
+                <a href="{{url_for('main.index')}}">Terms & conditions</a></p>
+
+        </footer>
+
+    </div>
+    <script src="{{ url_for('static',filename = 'temp.js')}}"></script>
+</body>
+
+
+</html>
